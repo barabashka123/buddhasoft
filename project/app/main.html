@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 create">
+            <button ng-click="create()" class="btn btn-default">Create product</button>
+        </div>
+
+        <div class="col-md-3 blockProduct"
+             ng-repeat="product in listProducts track by $index">
+
+            <p ng-click="open(product)">{{product.title}}</p>
+
+            <button ng-click="edit(product.id)"
+                    class="btn btn-default">Edit</button>
+            <button ng-click="delete(product.id)"
+                    class="btn btn-default">Delete</button>
+        </div>
+    </div>
+</div>
+
